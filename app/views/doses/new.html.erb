@@ -1,0 +1,10 @@
+  
+<div class="container">
+<h1>Add a dose to <%= @cocktail.name.capitalize %> </h1>
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+  <%= f.submit 'Add' %>
+<% end %>
+</div>
