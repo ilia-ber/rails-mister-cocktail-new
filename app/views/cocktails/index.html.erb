@@ -1,9 +1,12 @@
-<h1>Mr Cocktail Reloaded</h2>
-<br>
-<ul>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Mr Cocktail Reloaded</h2>
+    <a class="btn btn-flat" href="#"><h4><%= link_to 'Create a Cocktail', new_cocktail_path %></h4></a>
+  </div>
+</div>
+
   <% @cocktails.each do |cocktail| %>
    <li> <%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %> </li>
   <% end %>
 </ul>
 
-<h4><%= link_to 'Create a Cocktail', new_cocktail_path %></h4>
