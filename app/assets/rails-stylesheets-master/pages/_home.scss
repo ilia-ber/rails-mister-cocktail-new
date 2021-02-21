@@ -2,17 +2,24 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 220px 0;
+  padding: 190px 0;
   background-attachment: fixed;
   border-bottom-style: groove;
+  a {
+    color: $rusty;
+    text-decoration: none;
+    font-family: $body-font;
+    letter-spacing: 2px;
+  }
 }
 
 .banner h1 {
   color: white;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
+  font-size: 50px;
   font-weight: bold;
-  letter-spacing: 15px;
+  letter-spacing: 52px;
+  margin-bottom: 40px;
 }
 
 .banner p {
@@ -22,4 +29,9 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-weight: lighter;
   letter-spacing: 3px;
+}
+
+.btn {
+  border: 2px solid $rusty;
+  border-radius: 25px;
 }
