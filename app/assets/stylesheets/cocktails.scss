@@ -24,4 +24,53 @@
 
 .btn {
   border: 2px solid $rusty;
+  a{
+    color: $rusty;
+  }
 }
+
+.btn-submit {
+  border: 4px solid #da723c;
+  color: #da723c;
+  letter-spacing: 5px;
+  font-size: 23px;
+  margin-top: 50px;
+  background: none;
+  border-radius: 23px;
+  padding: 5px;
+}
+
+
+.container-new {
+  background-size: cover;
+  background-position: center;
+  padding: 220px 0;
+}
+
+.header {
+  color: white;
+}
+
+.header-new {
+  color: white;
+  margin-bottom: 50px;
+  letter-spacing: 13px;
+}
+
+.new-menu {
+  margin-top: 80px;
+  a {
+    color: $bright;
+    text-decoration: none;
+  }
+}
+
+.form-control {
+  width: 40%;
+  color:white;
+}
+
+label {
+  color: white;
+}
+
