@@ -1,21 +1,38 @@
-<div class="container">
-<h1>Your cocktail</h1>
-<h2> <%= @cocktail.name.capitalize %> </h2>
-<br>
-<h3>Ingredients</h3>
-<ul>
-  <% @cocktail.ingredients.each do |ingredient| %>
-  <li> <%= ingredient.name.capitalize %> </li>
-  <% end %>
-</ul>
+<div class="container-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dzpgbbhmm/image/upload/v1614028882/Mr%20Cocktail/pexels-photo-2209519_h26or5.jpg);">
+  <div class="title"> <%= @cocktail.name.upcase %></div>
+    <% if @cocktail.photo.attached? %>
+      <%= cl_image_tag(@cocktail.photo.key, class: "card-img-top w-100 h-100") %>
+    <% else %>
+      <div >
+        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
+      </div>
+    <% end %>  
+  <br>
+  <div class="description">
+    <div class="ingredients"></div>
+      <p>Ingredients:</p>
+      <ul>
+        <% @cocktail.ingredients.each do |ingredient| %>
+          <li> <%= ingredient.name.capitalize %> </li>
+        <% end %>
+      </ul>
+    </div>
 
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-  <li>  <%= dose.description %> <%= link_to '☠️', dose_path(dose), method: :delete %> </li>
-  <% end %>
-</ul>
+    <div class="doses">
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <li>  <%= dose.description %> <%= link_to 'Remove', dose_path(dose), method: :delete %> </li>
+        <% end %>
+    </ul>
+  </div>
 
-<%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail) %>
-<br>
-<%= link_to "Back to cocktails", "/cocktails" %>
+
+    <div class="links">
+      <%= link_to 'Add ingredients', new_cocktail_dose_path(@cocktail) %>
+      <br>
+      <%= link_to 'Remove cocktail', cocktail_path(@cocktail), method: :delete %>
+      <br>
+      <%= link_to "Back to cocktails", "/cocktails" %>
+    </div>
+  </div>
 </div>
