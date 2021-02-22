@@ -15,7 +15,6 @@
   font-weight: bold;
   margin-bottom: 80px;
   letter-spacing: 78px;
-  color: $rusty;
 }
 
 .banner p {
@@ -34,8 +33,24 @@
   }
 }
 
+.btn:hover {
+  color: white;
+  background-color: $bright;
+  a {
+    color:white;
+  }
+}
+
+.btn.focus, .btn:focus {
+  color: white;
+  background-color: $bright;
+  a {
+    color: white;
+  }
+}
+
 .btn-submit {
-  border: 5px solid $bright;
+  border: 3px solid $bright;
   color: $bright;
   letter-spacing: 5px;
   font-size: 23px;
@@ -47,6 +62,15 @@
   font-weight: bolder;
 }
 
+.btn-submit:hover {
+  color: white;
+  background-color: $bright;
+}
+
+.btn-submit.focus, .btn-submit:focus {
+  color: white;
+  background-color: $bright;
+}
 
 .container-new {
   background-size: cover;
@@ -80,7 +104,7 @@
   display: inline;
 }
 
-.form-control-file file-optional {
+.form-control-file {
   text-align: center;
 }
 
@@ -91,3 +115,59 @@ label {
 .form-group {
   text-align: center;
 }
+
+.cocktail-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+.cocktail-card-text {
+  display: flex;
+  flex-direction: column;
+  float: left;
+}
+
+.cocktail-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cocktail-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  a {
+    color: $rusty;
+    text-decoration: none;
+    letter-spacing: 8px;
+  }
+}
+
+.cocktail-description {
+  font-size: 15px;
+  opacity: .7;
+  margin: 0;
+  float: left;
+  color: $rusty;
+}
+
+
+.cocktail-card .cocktail-card-text {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.cocktails {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+  padding: 30px;
+}
+
