@@ -73,10 +73,11 @@
 }
 
 .container-new {
+  height: 100vh;
   background-size: cover;
   background-position: center;
-  padding: 220px 0;
   text-align: center;
+  background-repeat: no-repeat;
 }
 
 .header {
@@ -172,8 +173,9 @@ label {
 }
 
 .container-show {
-  padding: 317px 0;
+  height: 100vh;
   background-size: cover;
+  position: absolute;
 }
 
 .title {
@@ -181,4 +183,28 @@ label {
   font-size: 25px;
   letter-spacing: 15px;
   text-align: center;
+}
+
+.show-card {
+  width: 280px;
+  height: 358px;
+  color: white;
+  background: #91091e;
+  position: relative;
+  margin-top: 80px;
+  border-radius: 12px;
+  opacity: 0.9;
+  margin: 115px 526px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  a {
+    color: $bright;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
 }
